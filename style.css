@@ -1,0 +1,221 @@
+/*
+  ROOT
+*/
+
+:root {
+  --white: #fff;
+  --hoverButton: #006cf8;
+  --bgTitle: rgba(179, 177, 185, 0.5);
+  --bgDescription: rgba(255, 255, 255, 0.5);
+  --bgDescriptionTitle: #333;
+}
+
+/*
+  GERAL
+*/
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Outfit', sans-serif;
+  background-image: url(./assets/fundo.png);
+}
+
+/*
+  HEADER
+*/
+
+.header {
+  display: flex;
+  margin-top: 0.9375rem;
+  justify-content: center;
+}
+
+.header img {
+  width: 30%;
+}
+
+/*
+  MAIN
+*/
+
+.onePieceSlider {
+  gap: 5rem;
+  display: flex;
+  margin: 1.875rem 0 0.625rem 0;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+  BUTTON
+*/
+
+.button:nth-child(1) {
+  transform: rotateY(180deg);
+}
+
+.button {
+  width: 4.375rem;
+  height: 4.375rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 3.125rem;
+  background-color: var(--white);
+  transition: background 0.5s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
+}
+
+.button:hover {
+  background-color: var(--hoverButton);
+}
+
+/*
+LIST
+*/
+
+.listOnePiece {
+  width: 19.375rem;
+  height: 32.5rem;
+  list-style: none;
+  position: relative;
+  margin-bottom: 0.625rem;
+}
+
+/* LI */
+
+.cards {
+  opacity: 0;
+  height: 100%;
+  display: flex;
+  padding: 0.75rem;
+  position: absolute;
+  border-radius: 0.625rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.transition {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* TEXT */
+
+.information {
+  gap: 0.3125rem;
+  padding: 0.3125rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.625rem;
+  flex-direction: column;
+  background-color: var(--bgTitle);
+}
+
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
+.information h2 {
+  font-size: 1.5rem;
+}
+
+.information p {
+  font-size: 1rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards .description {
+  border-radius: 0.3125rem;
+  background-color: var(--bgDescription);
+}
+
+.cards .descriptionTitle {
+  padding: 0.125rem;
+  font-size: 0.9375rem;
+  text-align: center;
+  color: var(--white);
+  border-top-left-radius: 0.3125rem;
+  background-color: var(--bgDescriptionTitle);
+}
+
+.cards .descriptionContent {
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  overflow-y: auto;
+  max-height: 7.1875rem;
+  text-align: justify;
+}
+
+/* IMAGE */
+
+.image {
+  margin-top: 0.625rem;
+  text-align: center;
+}
+
+.cards img {
+  max-width: 100%;
+  max-height: 17.5rem;
+}
+
+/* LUFFY */
+
+.luffy {
+  background: url(./assets/fundo-card-2.jpg) no-repeat;
+}
+
+/* SANJI */
+
+.sanji {
+  background: url(./assets/fundo-card-1.jpg) no-repeat;
+}
+
+/* ZORO */
+
+.zoro {
+  background: url(./assets/fundo-card-9.jpg) no-repeat;
+}
+
+/* 
+  SELECT
+*/
+
+.select {
+  opacity: 1;
+  z-index: 1;
+}
+
+@media (max-width: 38.75rem) {
+  body {
+    height: 100vh;
+    background-repeat: repeat;
+  }
+
+  .onePieceSlider {
+    gap: 0.3125rem;
+    width: 100%;
+    width: auto;
+  }
+
+  .button {
+    width: 2.8125rem;
+    border-radius: 3.125rem;
+  }
+}
